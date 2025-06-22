@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    rehypePlugins: [require('rehype-slug')],
+  },
+});
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = withMDX({
+  experimental: {
+    appDir: true,
+  },
+  pageExtensions: ['ts', 'tsx', 'mdx'],
+})
 
-export default nextConfig;
+module.exports = nextConfig
