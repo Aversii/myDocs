@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Documentação Interativa com Next.js, MDX e Styled Components
 
-## Getting Started
+Este projeto é uma plataforma de documentação técnica interativa, desenvolvida com **Next.js App Router**, **MDX**, **Styled Components** e funcionalidades avançadas como **Tabela de Conteúdos Dinâmica**, **Sidebar com Histórico de Acesso** e suporte a **cópia de código com um clique**.
 
-First, run the development server:
+##  Funcionalidades
+
+- ✅ Suporte a arquivos MDX dinâmicos.
+- ✅ Tabela de Conteúdos flutuante com destaque da seção atual.
+- ✅ Sidebar com lista de documentos e seção de "Visitados Recentemente".
+- ✅ Sistema de cópia de blocos de código com feedback visual (animação e efeito de brilho).
+- ✅ Scroll inteligente com setas de navegação.
+- ✅ Design moderno, responsivo e com tema dark elegante.
+
+##  Tecnologias Utilizadas
+
+- [Next.js 13+ (App Router)](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [MDX](https://mdxjs.com/)
+- [Styled Components](https://styled-components.com/)
+- [Lodash.debounce](https://lodash.com/docs/#debounce)
+- [Lucide React Icons](https://lucide.dev/)
+
+## 📂 Estrutura de Pastas
+
+```plaintext
+├── src
+│   ├── components         # Componentes reutilizáveis (Sidebar, TOC, etc.)
+│   ├── content            # Arquivos .mdx com os conteúdos
+│   ├── hooks              # Hooks personalizados (useRecentlyVisited, useScrollArrows)
+│   ├── lib                # Funções auxiliares (slugify, extractHeadings, etc.)
+│   ├── styles             # Estilos com Styled Components
+│   └── app                # Páginas e rotas (Next.js App Router)
+```
+
+##  Como Rodar Localmente
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+# ou
+yarn install
+```
+
+3. Rode o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Acesse em: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##  Como Adicionar um Novo Documento
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Acesse a pasta `/src/content`.
+2. Crie um arquivo `.mdx`, por exemplo: `meu-tutorial.mdx`.
+3. Adicione o frontmatter no início do arquivo:
 
-## Learn More
+```mdx
+---
+title: Meu Tutorial Incrível
+---
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Automaticamente ele estará disponível na sidebar e com ToC gerado.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##  Melhorias Futuras
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ ] Implementar modo light/dark switch.
+- [ ] Suporte a busca global nos documentos.
+- [ ] Deploy automático com CI/CD (Vercel ou Netlify).
+- [ ] Página customizada de 404 mais estilizada.
 
-## Deploy on Vercel
+## Contribuições
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contribuições são bem-vindas! Sinta-se livre para abrir uma **issue** ou um **pull request**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##  Licença
+
+Este projeto está licenciado sob a licença [MIT](LICENSE).
+
+---
+
+Desenvolvido com 💙 por [Laversi](https://github.com/aversii)
